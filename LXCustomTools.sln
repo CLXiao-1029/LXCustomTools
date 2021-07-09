@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LXCustomTools", "LXCustomTools\LXCustomTools.csproj", "{774C40E7-8841-4320-9451-09A6938147F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{774C40E7-8841-4320-9451-09A6938147F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{774C40E7-8841-4320-9451-09A6938147F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{774C40E7-8841-4320-9451-09A6938147F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{774C40E7-8841-4320-9451-09A6938147F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C9FD2AB-37F6-49E7-A185-20C9B9D75962}
+	EndGlobalSection
+EndGlobal
