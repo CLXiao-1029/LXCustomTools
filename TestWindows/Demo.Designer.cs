@@ -1,5 +1,6 @@
-﻿
-namespace LXCustomTools
+﻿using LXCustomTools;
+
+namespace TestWindows
 {
     partial class Demo
     {
@@ -56,6 +57,8 @@ namespace LXCustomTools
             this.lxImageButton1.Location = new System.Drawing.Point(13, 25);
             this.lxImageButton1.Name = "lxImageButton1";
             this.lxImageButton1.NormalImage = null;
+            this.lxImageButton1.OpenAutoSize = false;
+            this.lxImageButton1.OpenGraphicsPath = false;
             this.lxImageButton1.OpenTransparent = false;
             this.lxImageButton1.Size = new System.Drawing.Size(75, 23);
             this.lxImageButton1.TabIndex = 1;
@@ -77,10 +80,9 @@ namespace LXCustomTools
 
         }
 
-        #endregion
-
         private LXCustomTextBox lxCustomTextBox1;
         private LXImageButton lxImageButton1;
+        #endregion
     }
 }
 

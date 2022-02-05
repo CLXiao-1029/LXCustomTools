@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{774C40E7-8841-4320-9451-09A6938147F2}</ProjectGuid>
+    <ProjectGuid>{9A75DD68-2E47-43F1-A9ED-5AFDA490F131}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>LXCustomTools</RootNamespace>
-    <AssemblyName>LXCustomTools</AssemblyName>
+    <RootNamespace>TestWindows</RootNamespace>
+    <AssemblyName>TestWindows</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -22,7 +22,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,50 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomBrowseFolder\FolderBrowserDialog\LXFolderBrowserDialog.cs">
-      <SubType>Component</SubType>
+    <Compile Include="Demo.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomBrowseFolder\FolderBrowserDialog\LXFolderBrowserDialog.designer.cs">
-      <DependentUpon>LXFolderBrowserDialog.cs</DependentUpon>
+    <Compile Include="Demo.Designer.cs">
+      <DependentUpon>Demo.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomBrowseFolder\VistaFolderBrowserDialog\LXCOMGuides.cs" />
-    <Compile Include="CustomBrowseFolder\VistaFolderBrowserDialog\LXInterop.cs" />
-    <Compile Include="CustomBrowseFolder\VistaFolderBrowserDialog\LXNativeMethods.cs" />
-    <Compile Include="CustomBrowseFolder\VistaFolderBrowserDialog\LXSafeHandles.cs" />
-    <Compile Include="CustomBrowseFolder\VistaFolderBrowserDialog\LXVistaFolderBrowser.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CustomBrowseFolder\VistaFolderBrowserDialog\LXVistaFolderBrowserDialog.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CustomBrowseFolder\VistaFolderBrowserDialog\LXVistaFolderBrowserDialog.Designer.cs">
-      <DependentUpon>LXVistaFolderBrowserDialog.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomButton\LXImageButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CustomButton\LXImageButton.designer.cs">
-      <DependentUpon>LXImageButton.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomGroup\LXGroupBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CustomGroup\LXGroupBox.designer.cs">
-      <DependentUpon>LXGroupBox.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomListView\ListViewEx.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CustomListView\ListViewEx.Designer.cs">
-      <DependentUpon>ListViewEx.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomTextBox\LXCustomTextBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="CustomTextBox\LXCustomTextBox.Designer.cs">
-      <DependentUpon>LXCustomTextBox.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Demo.resx">
+      <DependentUpon>Demo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -110,6 +76,14 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LXCustomTools\LXCustomTools.csproj">
+      <Project>{774c40e7-8841-4320-9451-09a6938147f2}</Project>
+      <Name>LXCustomTools</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
